@@ -1,0 +1,25 @@
+4. What is valid identifier:
+	1. 22region
+	2. my250
+	3. python2021batch
+	4. dollar$toinr
+	5. _aztec_cs
+	6. define
+	7. import
+
+
+1.22region is an invalid identifier as it contain 22 at start and no identifier start with digit
+
+2. my250 is a valid identifier
+
+3. python2021batch is a valid identifier
+
+4. dollar$toinr is an invalid identifire as identifier do not contain specical character
+
+5. _aztec_cs is a valid identifier
+
+6. define is a valid identifier
+
+7. import is an invalid  identifier keywords cannot be used as identifier.
+
+

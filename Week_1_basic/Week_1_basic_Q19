@@ -1,0 +1,30 @@
+"""19. What is difference between del and none"""
+
+
+The difference is that x = None will free whatever it referenced but keep the name around even though
+it’s just referencing None (which is a type, NoneType).
+
+On the other hand del x will completely remove both the name and what it referenced. If you thereafter try to use x
+an NameError will be thrown (or AttributeError in case of a object property).
+
+
+ie: sample code
+
+x = 'Some text here to give the variable a decent size'
+y = 2
+print('x value before deletion: {}'.format(x))
+print('x size before deletion: {} bytes'.format(sys.getsizeof(x)))
+print('y value before deletion: {}'.format(y))
+
+x = None
+del y
+
+
+print('x value after deletion: {}'.format(x))
+print('x size after deletion: {} bytes'.format(sys.getsizeof(x))) # A few bytes needed to keep symbol name
+print('x type after deletion: {}'.format(type(x)))
+
+if not x:
+    print('Can still use x!')
+
+print('y value after deletion: {}'.format(y)) # Will throw NameError (AttributeError in case of class property)

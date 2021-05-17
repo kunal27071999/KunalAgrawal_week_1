@@ -1,0 +1,17 @@
+6. What is import
+
+
+The import statement combines two operations; it searches for the named module,
+then it binds the results of that search to a name in the local scope.
+The search operation of the import statement is defined as a call to the __import__() function,
+with the appropriate arguments.
+The return value of __import__() is used to perform the name binding operation of the import statement.
+See the import statement for the exact details of that name binding operation.
+
+A direct call to __import__() performs only the module search and, if found, the module creation operation.
+While certain side-effects may occur, such as the importing of parent packages,
+and the updating of various caches (including sys.modules), only the import statement performs a name binding operation.
+
+When an import statement is executed, the standard builtin __import__() function is called.
+Other mechanisms for invoking the import system (such as importlib.
+import_module()) may choose to bypass __import__() and use their own solutions to implement import semantics.
